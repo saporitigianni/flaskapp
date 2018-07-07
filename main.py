@@ -1,3 +1,18 @@
+"""
+Microservice that provides the hash of a string or the string of a hash (of a
+string previously hashed)
+
+###############################################################################
+What would the bottleneck(s) be in your implementation as you acquire more
+users? How you might scale your microservice?
+###############################################################################
+
+Since the app calculates the hash of the message and makes a database store,
+the bottleneck will just be handling more requests which can be solved by
+using a load balancer to spread the load accorss multiple instances of the
+microservice
+"""
+
 from flask import Flask, request, abort
 import json
 from hashlib import sha256
