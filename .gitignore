@@ -1,0 +1,6 @@
+.DS_Store
+.idea/
+appengine_config.pyc
+main.pyc
+env/
+lib/
